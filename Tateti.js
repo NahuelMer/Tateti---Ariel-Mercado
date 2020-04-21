@@ -148,12 +148,14 @@ function resumen() {
         }
     }
 
+
+    //mostrar esto mas bonito
     var output1 = document.getElementById('resumen1');
     var output2 = document.getElementById('resumen2');
-    var json1 = JSON.stringify(j1);
-    var json2 = JSON.stringify(j2);
-    output1.innerHTML = json1;
-    output2.innerHTML = json2;
+    var json1 = JSON.stringify(j1, undefined, 2);
+    var json2 = JSON.stringify(j2, undefined, 2);
+    output1.textContent = json1;
+    output2.textContent = json2;
 
 
     /*var output1 = document.getElementById('resumen1');
