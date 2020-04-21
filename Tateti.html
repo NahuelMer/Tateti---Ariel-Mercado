@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+    <title>Ta te ti</title>
+
+    <style>
+        .tableStyle {
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            font-size: 25pt;
+        }
+    </style>
+
+    <script type="text/javascript" src="Tateti.js"></script>
+</head>
+
+<body>
+    <h1>
+        <center>Ta te ti - Ariel Mercado</center>
+    </h1>
+
+
+    <h2>Jugadores</h2>
+    <i>Jugador 1 (X)</i>
+    <input type="text" id="user1" name="user1" value="">
+    <br><br>
+    <i>Jugador 2 (O)</i>
+    <input type="text" id="user2" name="user2" value="">
+    <br><br>
+
+    <b id="msg">
+        <input type="submit" name="sub1" value="Jugar" onclick="start();">
+        <br><br> Pulsa en Jugar
+    </b>
+
+    <table align="center" border="30" id="tableID">
+
+        <caption align="top">
+            <h2>Resumen </h2>
+            <h3>Jugador 1: </h3>
+            <pre id="resumen1"></pre>
+            <h3>Jugador 2: </h3>
+            <pre id="resumen2"></pre>
+        </caption>
+
+        <thead>
+
+        </thead>
+
+        <tbody>
+
+
+
+
+            <tr>
+                <td id="0" class="tableStyle" onclick="nextMove(this);"></td>
+                <td id="1" class="tableStyle" onclick="nextMove(this);"></td>
+                <td id="2" class="tableStyle" onclick="nextMove(this);"></td>
+            </tr>
+            <tr>
+                <td id="3" class="tableStyle" onclick="nextMove(this);"></td>
+                <td id="4" class="tableStyle" onclick="nextMove(this);"></td>
+                <td id="5" class="tableStyle" onclick="nextMove(this);"></td>
+            </tr>
+            <tr>
+                <td id="6" class="tableStyle" onclick="nextMove(this);"></td>
+                <td id="7" class="tableStyle" onclick="nextMove(this);"></td>
+                <td id="8" class="tableStyle" onclick="nextMove(this);"></td>
+            </tr>
+
+        </tbody>
+    </table>
+
+
+
+</body>
+
+</html>
