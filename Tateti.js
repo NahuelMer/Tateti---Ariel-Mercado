@@ -149,17 +149,29 @@ function resumen() {
     }
 
 
-    //mostrar esto mas bonito
-    var output1 = document.getElementById('resumen1');
-    var output2 = document.getElementById('resumen2');
-    var json1 = JSON.stringify(j1, undefined, 2);
-    var json2 = JSON.stringify(j2, undefined, 2);
-    output1.textContent = json1;
-    output2.textContent = json2;
+    //Resumen
+    var outputNJ1 = document.getElementById('nombre1');
+    var outputMJ1 = document.getElementById('mov1');
+    var outputSJ1 = document.getElementById('state1');
 
+    var outputNJ2 = document.getElementById('nombre2');
+    var outputMJ2 = document.getElementById('mov2');
+    var outputSJ2 = document.getElementById('state2');
 
-    /*var output1 = document.getElementById('resumen1');
-    var output2 = document.getElementById('resumen2');
-    output1.innerHTML = [j1.name, j1.moves, j1.state];
-    output2.innerHTML = [j2.name, j2.moves, j2.state];*/
+    var jsonNJ1 = JSON.stringify(j1.Nombre, undefined, 2);
+    var jsonMJ1 = JSON.stringify(j1.Movimientos, undefined, 2);
+    var jsonSJ1 = JSON.stringify(j1.Estado, undefined, 2);
+
+    var jsonNJ2 = JSON.stringify(j2.Nombre, undefined, 2);
+    var jsonMJ2 = JSON.stringify(j2.Movimientos, undefined, 2);
+    var jsonSJ2 = JSON.stringify(j2.Estado, undefined, 2);
+
+    outputNJ1.textContent = "Nombre: " + jsonNJ1;
+    outputMJ1.textContent = "Movimientos: " + jsonMJ1;
+    outputSJ1.textContent = "Resultado: " + jsonSJ1;
+
+    outputNJ2.textContent = "Nombre: " + jsonNJ2;
+    outputMJ2.textContent = "Movimientos: " + jsonMJ2;
+    outputSJ2.textContent = "Resultado: " + jsonSJ2;
+
 }
