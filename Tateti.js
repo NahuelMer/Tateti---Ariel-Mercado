@@ -14,9 +14,15 @@ function start() {
         turnCounter = 0;
         endAux = false;
         document.turn = "X";
-        setMsg(document.turn + " empieza");
+        setMsg(input1 + " empieza");
     };
 };
+
+function restart() {
+    document.getElementById("user1").value = "";
+    document.getElementById("user2").value = "";
+    location.reload();
+}
 
 function setMsg(msg) {
     document.getElementById("msg").innerText = msg;
@@ -42,12 +48,14 @@ function nextTurn() {
         if (document.turn == "X") {
             document.turn = "O";
             movesO++;
+            setMsg("Es el turno de " + document.getElementById("user2").value);
 
         } else {
             document.turn = "X";
             movesX++;
+            setMsg("Es el turno de " + document.getElementById("user1").value);
         };
-        setMsg("Es el turno de " + document.turn);
+
     } else {
         return;
     }
@@ -113,7 +121,11 @@ function gameDraw() {
 
 function endGame() {
     setMsg("Partida terminada");
-    alert("GANO " + document.turn);
+    if (document.turn == "X") {
+        alert("GANO " + document.getElementById("user1").value);
+    } else {
+        alert("GANO " + document.getElementById("user2").value);
+    }
     endAux = true;
     resumen();
 }
